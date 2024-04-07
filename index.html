@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>UXDay 2024</title>
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="The AI Moment is now at Microsoft IDC" />
+  <link rel="canonical" href="https://uxday.in/" />
+  <meta property="og:url" content="https://uxday.in/" />
+  <meta property="og:site_name" content="UXDay 2024" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://uxday.in/og_image.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet"></head>
+
+<body>
+
+  <header class="header">
+    <img class="logo" src="karmacare.png" alt="Karma Care Logo">
+    <div class="navbar">
+      <a href="#">Services</a>
+      <a href="#">Resources</a>
+      <a href="#">Careers</a>
+      <a href="#">About</a>
+    </div>
+  </header>
+  
+
+  
+  <div class="main-content">
+    <div class="column">
+      <h1>Your Safe Haven for Healing and Growth</h1>
+      <p>At Karma Care, we understand that everyone’s journey is unique. That’s why we offer a range of psychological services, including counselling, psychotherapy, assessments, and other clinically effective facilities, all tailored to meet your individual needs.</p>
+      <p>We are a sex-positive and queer affirmative space</p>
+      <a href="#" class="button">Book Session</a>
+    </div>
+    <div class="column">
+      <img class="illustration" src="illustration.png" alt="">
+    </div>
+    <div class="column other-services border-left">
+      <div class="fw400 services border-bottom">Other Services</div>
+      <div class="services border-bottom">
+        <div class="flexcol">
+        <img class="icon1">
+        <h2>Workshops for Therapists</h2>
+        </div>
+        <p>Designed for mental health professionals, these sessions provide insights into the latest trends and methodologies in the field, fostering personal and professional growth.</p>
+        <a href="#" class="btn"><span>Workshops →</span></a>
+      </div>
+      <div class="services border-bottom">
+        <div class="flexcol">
+        <img class="icon2">
+        <h2>Internship Opportunities</h2>
+      </div>
+        <p>Jumpstart your career in psychology with our comprehensive internship program. Gain hands-on experience and practical knowledge by working alongside our expert team.</p>
+        <a href="#" class="btn"><span>Internships →</span></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="main-content">
+    <div class="column">
+      <h1>Your Safe Haven for Healing and Growth</h1>
+      <p>At Karma Care, we understand that everyone’s journey is unique. That’s why we offer a range of psychological services, including counselling, psychotherapy, assessments, and other clinically effective facilities, all tailored to meet your individual needs.</p>
+      <p>We are a sex-positive and queer affirmative space</p>
+      <a href="#" class="button">Book Session</a>
+    </div>
+    <div class="column">
+      <img class="illustration" src="illustration.png" alt="">
+    </div>
+    <div class="column other-services border-left">
+      <div class="fw400 services border-bottom">Other Services</div>
+      <div class="services border-bottom">
+        <div class="flexcol">
+        <img class="icon1">
+        <h2>Workshops for Therapists</h2>
+        </div>
+        <p>Designed for mental health professionals, these sessions provide insights into the latest trends and methodologies in the field, fostering personal and professional growth.</p>
+        <a href="#" class="btn"><span>Workshops →</span></a>
+      </div>
+      <div class="services border-bottom">
+        <div class="flexcol">
+        <img class="icon2">
+        <h2>Internship Opportunities</h2>
+      </div>
+        <p>Jumpstart your career in psychology with our comprehensive internship program. Gain hands-on experience and practical knowledge by working alongside our expert team.</p>
+        <a href="#" class="btn"><span>Internships →</span></a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+    // Set higher z-index for stripes so content scrolls under them.
+    function fixStripeZ() {
+      document.getElementById('bg1').style.height = '20px';
+      document.getElementById('bg1').style.zIndex = '10';
+
+      document.getElementById('bg2').style.height = '20px';
+      document.getElementById('bg2').style.zIndex = '10';
+
+      document.getElementById('bg3').style.height = '10px';
+      document.getElementById('bg3').style.zIndex = '10';
+    }
+    // Wait 2.5s for entry anim to play and then fix stripe z-index
+    setTimeout(fixStripeZ, 2500);
+
+    // Get the header and header button elements
+    var header = document.querySelector('header');
+    var headerbtn = document.getElementById('headerbtn');
+    var topbtn = document.getElementById('topbtn');
+
+    // Enables the header outline and shadow, shows button
+    function enableHeaderMode() {
+      header.classList.add('glass-shadow');
+      headerbtn.style.display = "inline";
+      headerbtn.style.opacity = "1";
+    }
+
+    // Disables the header outline and shadow
+    // Removes button after 80ms to allow it to animate out
+    function disableHeaderMode() {
+      header.classList.remove('glass-shadow');
+      headerbtn.style.opacity = "0";
+      setTimeout(function () {
+        headerbtn.style.display = "none";
+      }, 80);
+    }
+
+    // Enable or disable headermode based on whether scroll is past position of topbtn
+
+    var scrollTimeout;
+
+    function handleScroll() {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function () {
+        if (window.scrollY > topbtn.offsetTop) {
+          enableHeaderMode();
+        } else {
+          disableHeaderMode();
+        }
+      }, 80);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+
+    // Replay the background animation by toggling the class anim-stretch-in
+    function replayAnim() {
+      document.getElementById('bg1').classList.remove('anim-stretch-in');
+      document.getElementById('bg2').classList.remove('anim-stretch-in');
+      document.getElementById('bg3').classList.remove('anim-stretch-in');
+      document.getElementById('bg4').classList.remove('anim-stretch-in');
+
+      setTimeout(function () {
+        document.getElementById('bg1').classList.add('anim-stretch-in');
+        document.getElementById('bg2').classList.add('anim-stretch-in');
+        document.getElementById('bg3').classList.add('anim-stretch-in');
+        document.getElementById('bg4').classList.add('anim-stretch-in');
+      }, 50);
+    }
+
+    // Marquee scroll in footer
+    // Increase x offset in background-position of <footer> by 3px every 200 ms
+    setInterval(function () {
+      var footer = document.querySelector('footer');
+      var currentOffset = parseInt(footer.style.backgroundPositionX) || 0;
+      footer.style.backgroundPositionX = (currentOffset - 3) + 'px';
+    }, 200);
+
+  </script>
+</body>
+
+</html>
